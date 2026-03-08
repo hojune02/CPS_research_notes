@@ -83,3 +83,9 @@ HMIs represent the screen that human operators look at. Operators issue commands
 The SCADA master polls field devices for gathering sensor data nad issuing commands. Field devices respond to the master's request, except for unsolicited responses (alarms) and exception reporting -> These are DNP3 features.
 
 Modbus is a dead-simple register read/write with no security. It has no authentication in base spec, and very simple to implement. DNP3 is used for RTUs which require long-distance capabilities; event data is timestamped with quality flags.
+
+## Cyber Physical Systems: Design Challenges
+
+[The link to the original paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4519604)
+
+The key idea behind this paper is that semantics of programming languages and abstractions lack temporal considerations. Since CPS are intimately linked with concurrency, specifying the timing of logical operations within the system is crucial. Predictability becomes crucial in these systems; they need to be predictable and reliable at any level of abstraction. The key mindset is to be "predictable when technically feasible". Real life environments are unpredictable, but the information gathered from those environments must be evaluated and processed in a timely and predictable manner within CPSs.
